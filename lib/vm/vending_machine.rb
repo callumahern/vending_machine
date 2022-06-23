@@ -6,7 +6,6 @@ module VM
     end
 
     def current_balance
-
     end
 
     def purchase(item_name)
