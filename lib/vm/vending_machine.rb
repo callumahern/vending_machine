@@ -1,12 +1,14 @@
 module VM
   class VendingMachine
 
-    def insert_money(money)
+    attr_reader :current_balance
 
+    def initialize(current_balance = 0)
+      @current_balance = current_balance
     end
 
-    def current_balance
-      10
+    def insert_money(balance)
+      @current_balance += balance
     end
 
     def purchase(item_name)
@@ -14,7 +16,9 @@ module VM
     end
 
     def cancel
-      10
+      returned_balance = @current_balance
+      @current_balance = 0
+      returned_balance
     end
   end
 end
