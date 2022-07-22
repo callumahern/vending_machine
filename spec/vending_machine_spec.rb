@@ -22,8 +22,8 @@ describe VM::VendingMachine do
       end
 
       it 'resets the balance' do
-        subject.cancel
-        expect(subject.current_balance).to eq(0)
+        subject.cancel 
+        expect(subject.current_balance).to eq(0) 
       end
     end
 
