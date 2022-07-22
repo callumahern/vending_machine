@@ -3,8 +3,9 @@ module VM
 
     attr_reader :current_balance
 
-    def initialize(current_balance = 0)
+    def initialize(current_balance = 0, stock = {})
       @current_balance = current_balance
+      @stock = stock
     end
 
     def insert_money(balance)
