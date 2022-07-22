@@ -12,7 +12,11 @@ module VM
     end
 
     def purchase(item_name)
-      raise "Not enough money to buy #{item_name}"
+      if @current_balance < 100
+        raise "Not enough money to buy #{item_name}"
+      else
+        raise "#{item_name} is out of stock"
+      end
     end
 
     def cancel
