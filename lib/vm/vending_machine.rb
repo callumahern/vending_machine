@@ -12,7 +12,7 @@ module VM
     end
 
     def purchase(item_name)
-
+      raise "Not enough money to buy #{item_name}"
     end
 
     def cancel
