@@ -3,6 +3,7 @@ require 'spec_helper'
 describe VM::VendingMachine do
 
   subject { VM::VendingMachine.new }
+  let (:stock) { VM::Stock.new }
 
   context 'inserting funds' do
 

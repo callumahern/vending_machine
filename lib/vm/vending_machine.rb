@@ -3,7 +3,7 @@ module VM
 
     attr_reader :current_balance
 
-    def initialize(current_balance = 0, stock =  {'Mars Bar' => 100})
+    def initialize(current_balance = 0, stock = {'Mars Bar' => 100})
       @current_balance = current_balance
       @stock = stock
     end
