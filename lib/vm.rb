@@ -1,4 +1,5 @@
 require 'vm/version'
 require 'vm/vending_machine'
 require 'vm/stock'
+require 'vm/balance'
 require 'pry'
