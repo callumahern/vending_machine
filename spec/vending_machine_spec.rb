@@ -88,6 +88,10 @@ describe VM::VendingMachine do
       it 'resets the balance' do
         fail('Not implemented')
       end
+
+      it 'despenses an item' do
+        fail('Not implemented')
+      end
     end
   end
 end

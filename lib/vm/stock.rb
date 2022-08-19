@@ -1,9 +1,9 @@
 class Stock
-  def initialize(item_name = {'Mars Bar' => 100})
-    @item_name = item_name
+
+  attr_reader :item
+
+  def initialize(item = {'Mars Bar' => 100})
+    @item = item
   end
 
-  def []
-    @stock
-  end
 end

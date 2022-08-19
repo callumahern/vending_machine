@@ -1,11 +1,11 @@
 module VM
   class VendingMachine
 
-    attr_reader :current_balance
+    attr_reader :current_balance, :stock
 
-    def initialize(current_balance = 0, stock = {'Mars Bar' => 100})
+    def initialize(current_balance = 0, stock = Stock.new)
       @current_balance = current_balance
-      @stock = stock
+      @stock = Stock.new
     end
 
     def insert_money(balance)
@@ -13,7 +13,8 @@ module VM
     end
 
     def purchase(item_name)
-      if @stock[item_name] > @current_balance
+      if @stock.item["Mars Bar"] > @current_balance
+        binding.pry
         raise "Not enough money to buy #{item_name}"
       else
         raise "#{item_name} is out of stock"
