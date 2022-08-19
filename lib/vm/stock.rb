@@ -1,9 +1,9 @@
 class Stock
 
-  attr_reader :item
+  attr_reader :items
 
-  def initialize(items = {'Mars Bar' => 5, 'Cheese' => 4, 'Eggs' => 0})
-    @item = item
+  def initialize(items = {'Mars Bar' => 0, 'Cheese' => 4, 'Eggs' => 0})
+    @items = items
   end
 
   def out_of_stock
@@ -16,7 +16,7 @@ class Stock
 
   def dispense_item(item_name)
     if items[item_name] <= 0
-      raise "#{item.keys.join} is out of stock"
+      raise "#{item_name} is out of stock"
     else
       item_name
     end
