@@ -14,10 +14,9 @@ module VM
 
     def purchase(item_name)
       if @stock.item["Mars Bar"] > @current_balance
-        binding.pry
-        raise "Not enough money to buy #{item_name}"
+        raise stock.insufficient_funds
       else
-        raise "#{item_name} is out of stock"
+        raise stock.out_of_stock
       end
     end
 
@@ -26,5 +25,7 @@ module VM
       @current_balance = 0
       returned_balance
     end
+
+    private 
   end
 end
